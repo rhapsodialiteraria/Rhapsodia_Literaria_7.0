@@ -1,0 +1,66 @@
+.host-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen height */
+  overflow: hidden;
+}
+
+/* Each background image slide */
+.background-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;      /* fill image */
+  background-position: center; /* center it */
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Show the active one */
+.background-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Navigation dots */
+.host-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* Responsive: smaller height and dots on smaller screens */
+@media (max-width: 768px) {
+  .host-container {
+    height: 70vh; /* smaller for mobile */
+  }
+
+  .host-dots {
+    bottom: 20px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
