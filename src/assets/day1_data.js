@@ -36,7 +36,7 @@ const day1_data = [
     {
         e_no: 3,
         e_title: "POLEMISTA",
-        e_subtitle: "Prof Sebastian Joseph Competition for College Students Memorial Debate",
+        e_subtitle: "Prof Sebastian Joseph Memorial Debate competition for College Students",
         e_coordinator: "Dr. Neethu Mary Tomy (+91 7592889287)",
         e_student_coordinators: [
             { name: "Sajimol S", contact: "+91 9447626762" },
